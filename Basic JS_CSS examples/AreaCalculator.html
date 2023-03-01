@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Area Calculator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  
+       
+        
+    </head>
+   
+    <link rel="stylesheet" href="assignment1.css">
+<body>
+
+    <div class="jumbotron text-center" style="margin-bottom:0">
+        <h1>Computer Engineering technology : Web Programming </h1>
+    </div> 
+
+   <span class="span2">
+      <a href="#pageSubmenu"  data-toggle="collapse" aria-expanded="true" class="dropdown-toggle" border="1"> Menu</a>
+      <ul class="list-unstyled collapse show" id="pageSubmenu">
+        <li>
+            <a href="index.html" target="_blank">Index</a>
+        </li>
+          <li>
+              <a href="diamond.html" target="_blank">Diamond</a>
+          </li>
+          <li>
+              <a href="AreaCalculator.html" target="_blank">Area Calculator</a>
+          </li>
+          <li>
+            <a href="BottlesOfWater.html" target="_blank">Bottles Of Water</a>
+        </li>
+        <li>
+            <a href="Fibonacci.html" target="_blank">Fibonacci Generator</a>
+        </li>
+      </ul>
+    
+    </span>
+    <div id="results" class="span1"> </div>
+
+
+    
+<script>
+
+    function Triangle (height,base){
+    return (height*base)/2;
+}
+    function Rectangle (length,width){
+        return length*width;  
+}
+    function Cercle (radius) {
+        return Math.pow(radius,2)*Math.PI;
+} 
+    function calculateArea () {
+        var shape =window.prompt("Please enter the shape you want to calculate the area 1:Triangle , 2:Rectangle , 3:Circle ");
+        switch (shape){
+            case "1":
+                var height =window.prompt("Please enter the height of the triangle in ft");
+                var base = window.prompt("Please enter the base of the triangle in ft");
+                document.getElementById('results').innerHTML ="The area of your triangle is " + Triangle(height,base) +" sqft";
+                break ;
+                case "2":
+                var length =window.prompt("Please enter the length of the rectangle in ft");
+                var width = window.prompt("Please enter the width of the rectangle in ft");
+                document.getElementById('results').innerHTML ="The area of your rectangle is " + Rectangle(length,width) + " sqft";
+                    break;
+                    case "3":
+                    var radius =window.prompt("Please enter the length of the radius in ft");
+                    document.getElementById('results').innerHTML ="The area of your cercle is " + Cercle(radius) + " sqft";
+                    break;
+                default : alert("Please enter a valid input ");
+        }
+}
+            calculateArea();
+</script>
+
+
+
+        <div id="footer" class="jumbotron text-center" style="margin-bottom:0">
+            <h4> &copy Mohamed Jouini 040994664 &copy </h4>
+           </div>
+
+</body>
+</html>

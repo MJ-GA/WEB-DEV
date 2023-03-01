@@ -1,0 +1,18 @@
+.span1{
+    
+    margin-left: 20%;
+    margin-bottom: 5%;
+    font-size: 25px;  
+    border-width: 0;
+    border: white;
+ }
+
+.span2{
+
+    float: left;
+}
+
+#footer {
+
+    margin-top: 10%;
+}
